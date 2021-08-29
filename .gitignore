@@ -1,0 +1,3 @@
+bot_persistence
+*.json
+__pycache__/
