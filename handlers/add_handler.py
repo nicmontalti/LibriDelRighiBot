@@ -1,8 +1,6 @@
-from os import stat
-from re import sub
 from telegram.ext import CommandHandler, MessageHandler, ConversationHandler, Filters
 from telegram import ReplyKeyboardMarkup
-from uuid import uuid4
+from uuid import uuid1
 from add_book import add_book
 
 TITLE, AUTHOR, SUBJECT, CLASS, EDITION, CONFIRM = range(6)
@@ -48,7 +46,7 @@ def title(update, context):
     if (context.user_data['name'] is None):
         raise Exception
 
-    book_id = str(uuid4())
+    book_id = uuid1().int
     title = update.message.text
 
     context.chat_data['book_id'] = book_id
