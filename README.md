@@ -1,2 +1,2 @@
 # LibriDelRighiBot
-Bot Telegram per la compravendita di libri di testo
+This telegram BOT can be used to set a system for selling and buying books between students
